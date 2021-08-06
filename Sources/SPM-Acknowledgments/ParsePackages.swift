@@ -22,7 +22,7 @@ internal struct Package: Codable {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		name = try values.decode(String.self, forKey: .name)
 		let baseURL = try values.decode(URL.self, forKey: .licenseURL)
-		licenseURL = baseURL.appendingPathComponent("/raw/master/LICENSE")
+		licenseURL = baseURL.appendingPathComponent("/raw/main/LICENSE")
 	}
 }
 
